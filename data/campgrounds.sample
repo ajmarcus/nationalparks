@@ -1,0 +1,178 @@
+{
+    "total": "638",
+    "limit": "1",
+    "start": "0",
+    "data": [
+        {
+            "id": "EA81BC45-C361-437F-89B8-5C89FB0D0F86",
+            "url": "https://www.nps.gov/amis/planyourvisit/277-north-campground.htm",
+            "name": "277 North Campground",
+            "parkCode": "amis",
+            "description": "277 North Campground is generally open year-round and rarely fills up, except possibly on holiday weekends. A boat launch ramp off the campground may be available depending on lake levels. 277 North offers 17 primitive sites, which are first-come, first-served only. Each site has a covered picnic table and a BBQ grill. A group site is available with reservation only. No ground fires are allowed. The sites are suitable for tents or RVs. Vault toilets are available. No drinking water or hookups are available.",
+            "latitude": "29.512373696",
+            "longitude": "-100.908166334",
+            "latLong": "{lat:29.512373696, lng:-100.908166334}",
+            "audioDescription": "277 North Campground is generally open year-round and rarely fills up, except possibly on holiday weekends. A boat launch ramp off the campground may be available depending on lake levels. 277 North offers 17 primitive sites, which are first-come, first-served only. Each site has a covered picnic table and a BBQ grill. A group site is available with reservation only. No ground fires are allowed. The sites are suitable for tents or RVs. Vault toilets are available. No drinking water or hookups are available.",
+            "isPassportStampLocation": "0",
+            "passportStampLocationDescription": "",
+            "passportStampImages": [],
+            "geometryPoiId": "582AB459-28A8-453A-B22E-BAD481E92098",
+            "reservationInfo": "Standard overnight camping is first-come, first-served only and does not take a reservation. However, the group campsite requires a reservation no less than 3 days in advance and no more than 6 months. Link below is for group campsite ONLY.",
+            "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10182621",
+            "regulationsurl": "https://cms.nps.gov/amis/learn/management/compendium.htm",
+            "regulationsOverview": "Site capacity is not to exceed eight persons and one recreational vehicle camping unit (three vehicles total). Vehicles must be parked in designated parking areas only and may not be driven off-road. Visitors can stay in a campground up to 14 consecutive nights with a limit of 60 nights in the park in a calendar year. Quiet hours are 10pm to 6am. Check out time is 11am. Ground fires are prohibited.",
+            "amenities": {
+                "trashRecyclingCollection": "Yes - year round",
+                "toilets": [
+                    "Vault Toilets - year round"
+                ],
+                "internetConnectivity": "No",
+                "showers": [
+                    "None"
+                ],
+                "cellPhoneReception": "Yes - year round",
+                "laundry": "No",
+                "amphitheater": "No",
+                "dumpStation": "No",
+                "campStore": "No",
+                "staffOrVolunteerHostOnsite": "No",
+                "potableWater": [
+                    "No water"
+                ],
+                "iceAvailableForSale": "No",
+                "firewoodForSale": "No",
+                "foodStorageLockers": "No"
+            },
+            "contacts": {
+                "phoneNumbers": [],
+                "emailAddresses": [
+                    {
+                        "description": "",
+                        "emailAddress": "AMIS_Interpretation@nps.gov"
+                    }
+                ]
+            },
+            "fees": [
+                {
+                    "cost": "6.00",
+                    "description": "Sites are available on a first-come, first-served basis; there are no reservations. Fee is payable within 30 minutes of occupying a campsite. This can be paid at a centrally located self-pay fee station, which accepts credit or debit cards only. Checkout time is 11am.",
+                    "title": "277 North Campground Standard Site, Nightly Rate (Regular)"
+                },
+                {
+                    "cost": "3.00",
+                    "description": "Sites are available on a first-come, first-served basis; there are no reservations. Fee is payable within 30 minutes of occupying a campsite. This can be paid at a centrally located self-pay fee station, which accepts credit or debit cards only. Checkout time is 11am.",
+                    "title": "277 North Campground Standard Site, Nightly Rate (with Interagency Sr/Access Pass)"
+                },
+                {
+                    "cost": "35.00",
+                    "description": "One site available, reservation only. Fees charged on a tiered system as follows:1-15 people: $35.00, 16-35 people: $75.00, 36-75 people: $155.00. Make reservations on Recreation.gov no less than 3 days and no more than 180 days in advance. Check-out time is 11:00am. Quiet hours are from 10:00pm until 6:00am. No hook-ups.",
+                    "title": "San Pedro Campground Group Site, Nightly Rate (Only with Recreation.gov Reservation)"
+                }
+            ],
+            "directionsOverview": "Directions from Amistad National Recreation Area's Visitor Center- Head east on Highway 90 (turn left out of parking area) and drive 5.3 miles. Get in right lane, take Loop 79 on ramp, and travel 0.2miles. Turn left onto US 277/US 377 (follow signs to Sonora) and go 5.2 miles. Take a sharp right onto Old Highway 377 and follow to campground. GPS Coordinates 29.511294, -100.907325 or 29°30'40.7\"N 100°54'26.4\"W",
+            "directionsUrl": "",
+            "operatingHours": [
+                {
+                    "exceptions": [],
+                    "description": "277 North Campground is generally open year-round and rarely fills up, except possibly on holiday weekends.",
+                    "standardHours": {
+                        "wednesday": "All Day",
+                        "monday": "All Day",
+                        "thursday": "All Day",
+                        "sunday": "All Day",
+                        "tuesday": "All Day",
+                        "friday": "All Day",
+                        "saturday": "All Day"
+                    },
+                    "name": "277 North Campground"
+                }
+            ],
+            "addresses": [],
+            "images": [
+                {
+                    "credit": "NPS Photo",
+                    "crops": [],
+                    "title": "277 North Campground",
+                    "altText": "277 North Campground",
+                    "caption": "277 North Campground",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/6074AEF5-C153-C931-79C614E3D22A3CB4.jpg"
+                },
+                {
+                    "credit": "NPS Photo`",
+                    "crops": [],
+                    "title": "277 North Campground, Standard Campsite",
+                    "altText": "Picnic table under shade shelter.",
+                    "caption": "277 North Campground, Standard Campsite",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/607CE792-ACEF-DBDA-E0B625666F2F9DA2.jpg"
+                },
+                {
+                    "credit": "NPS Photo / J.Rolls",
+                    "crops": [],
+                    "title": "277 North Group Campsite",
+                    "altText": "Open space with a fire pit and covered picnic area for the group campsite.",
+                    "caption": "227 North Campground Group Campsite Facilities",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/FDE685F8-A53B-66A4-6348D4529CA3F2CB.jpg"
+                },
+                {
+                    "credit": "NPS / J. Rolls",
+                    "crops": [],
+                    "title": "277 North Campground, Standard Site 1",
+                    "altText": "Picnic table under metal shade shelter",
+                    "caption": "277 North Campground, Standard Site 1",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/9472362E-F073-7B1A-0587FE25080BB8FF.jpg"
+                },
+                {
+                    "credit": "NPS Photo / J. Rolls",
+                    "crops": [],
+                    "title": "277 North Campground, Standard Site 2",
+                    "altText": "Picnic table on cement pad under metal shade shelter",
+                    "caption": "277 North Campground, Standard Site 2",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/9D90A782-FBF3-9E0E-A934921502F94966.jpg"
+                },
+                {
+                    "credit": "NPS Photo / J. Rolls",
+                    "crops": [],
+                    "title": "277 North Campground, Standard Site 13",
+                    "altText": "Picnic table on cement pad under shade shelter with BBQ grill",
+                    "caption": "277 North Campground, Standard Site 13",
+                    "url": "https://www.nps.gov/common/uploads/structured_data/A1E80B5E-095F-0F99-C521DEA71C26FC59.jpg"
+                }
+            ],
+            "weatherOverview": "The climate at Amistad is semi-arid in moisture and subtropical in temperature. Humidity is more often high than low, with periodic morning fog. Summers are long, hot, and frequently humid; winters are mild and vary between sunny, warm, cloudy, and cool weather. For current weather, visit the park's weather page at https://www.nps.gov/amis/planyourvisit/weather.htm.",
+            "numberOfSitesReservable": "1",
+            "numberOfSitesFirstComeFirstServe": "17",
+            "campsites": {
+                "totalSites": "18",
+                "group": "1",
+                "horse": "0",
+                "tentOnly": "0",
+                "electricalHookups": "0",
+                "rvOnly": "0",
+                "walkBoatTo": "0",
+                "other": "0"
+            },
+            "accessibility": {
+                "wheelchairAccess": "Limited. However, some sites do have a cement ramp from gravel RV/tent pad to picnic table.",
+                "internetInfo": "",
+                "cellPhoneInfo": "",
+                "fireStovePolicy": "Ground fires are not permitted. Each campsite has a grill.",
+                "rvAllowed": "1",
+                "rvInfo": "RV and Trailers are permitted",
+                "rvMaxLength": "0",
+                "additionalInfo": "",
+                "trailerMaxLength": "0",
+                "adaInfo": "The main road leading to the campground is paved but the road that goes to each campsite is not.",
+                "trailerAllowed": "1",
+                "accessRoads": [
+                    "Paved Roads - All vehicles OK"
+                ],
+                "classifications": [
+                    "Limited Development Campground"
+                ]
+            },
+            "multimedia": [],
+            "relevanceScore": 1,
+            "lastIndexedDate": ""
+        }
+    ]
+}

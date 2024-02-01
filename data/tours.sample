@@ -1,0 +1,283 @@
+{
+  "total": "617",
+  "limit": "1",
+  "start": "0",
+  "data": [
+    {
+      "id": "95220F19-D769-9F68-BD79BF50EC4AE051",
+      "title": "\"Bombs Bursting in Air\" War of 1812 and the Star-Spangled Banner",
+      "description": "Learn how the bombardment of Fort McHenry in September of 1814 inspired Francis Scott Key to write the Star-Spangled Banner, today's National Anthem, making Baltimore and Fort McHenry the original \"Home of the Brave.\"",
+      "park": {
+        "states": "MD",
+        "parkCode": "fomc",
+        "designation": "National Monument and Historic Shrine",
+        "fullName": "Fort McHenry National Monument and Historic Shrine",
+        "url": "https://www.nps.gov/fomc/index.htm",
+        "name": "Fort McHenry"
+      },
+      "tags": [],
+      "activities": [
+        {
+          "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+          "name": "Guided Tours"
+        },
+        {
+          "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+          "name": "Self-Guided Tours - Walking"
+        },
+        {
+          "id": "B204DE60-5A24-43DD-8902-C81625A09A74",
+          "name": "Living History"
+        },
+        {
+          "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+          "name": "Junior Ranger Program"
+        },
+        {
+          "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+          "name": "Museum Exhibits"
+        }
+      ],
+      "topics": [
+        {
+          "id": "1170EEB6-5070-4760-8E7D-FF1A98272FAD",
+          "name": "Commerce"
+        },
+        {
+          "id": "A010EADF-78B8-4526-B0A4-70B0E0B3470E",
+          "name": "Trade"
+        },
+        {
+          "id": "D9FC6D14-F8C7-4EBA-86EA-DFD99B6BB4F5",
+          "name": "Enslavement"
+        },
+        {
+          "id": "988B4AFC-F478-4673-B66D-E6BDB0CCFF35",
+          "name": "Forts"
+        },
+        {
+          "id": "4C9D4777-A9DA-47D1-A0B9-F4A3C98BC1B3",
+          "name": "Maritime"
+        },
+        {
+          "id": "123CE28E-0EFA-4330-8E6E-EEFF3D7BF772",
+          "name": "Coastal Defenses"
+        },
+        {
+          "id": "7424754D-EB8B-4608-A69A-50D44992931B",
+          "name": "Maritime - Military"
+        },
+        {
+          "id": "78CF2074-0EE5-48F1-AD0F-B39C6C5A447B",
+          "name": "Piracy and Privateering"
+        },
+        {
+          "id": "A079385C-3E71-4E18-9E42-B046BC22EA95",
+          "name": "Ships and Shipwrecks"
+        },
+        {
+          "id": "4B3CD083-7500-434B-A8C2-D355925E0245",
+          "name": "Medicine"
+        },
+        {
+          "id": "97716EF5-D001-449C-993A-EC15AB8FD345",
+          "name": "Hospital"
+        },
+        {
+          "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+          "name": "Military"
+        },
+        {
+          "id": "E411F474-A530-4804-9D23-1D94C78B41E4",
+          "name": "Infantry and Militia"
+        },
+        {
+          "id": "B145FAB8-5462-4FE2-964E-464D3A5E7F96",
+          "name": "Artillery"
+        },
+        {
+          "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+          "name": "US Army"
+        },
+        {
+          "id": "7A9F5EB5-4AE3-4A16-AFF0-E1F9FF2F8B32",
+          "name": "US Navy"
+        },
+        {
+          "id": "6A3658B4-FB6E-4E23-A63A-9AEF11988831",
+          "name": "Battlefields"
+        },
+        {
+          "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+          "name": "Monuments and Memorials"
+        },
+        {
+          "id": "571E1597-4C6A-4814-A7E9-FC4EF8293CE8",
+          "name": "Music"
+        },
+        {
+          "id": "F669BC40-BDC4-41C0-9ACE-B2CD25373045",
+          "name": "Presidents"
+        },
+        {
+          "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+          "name": "Wars and Conflicts"
+        },
+        {
+          "id": "F94E78D3-EC70-4B99-AB57-BC70C4E79D65",
+          "name": "War of 1812"
+        },
+        {
+          "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+          "name": "Scenic Views"
+        }
+      ],
+      "durationMin": "45",
+      "durationMax": "90",
+      "durationUnit": "m",
+      "stops": [
+        {
+          "significance": "An orientation of the campaign that led to the attack on Fort McHenry.",
+          "assetId": "D65B5A28-DE83-4332-8B7E-A304DFB010B9",
+          "assetName": "Chesapeake Map",
+          "assetType": "places",
+          "id": "956461BC-9451-A89C-C1A5A74215E77B8C",
+          "ordinal": "1",
+          "directionsToNextStop": "Follow the paved path leading towards the Star Fort structure stopping at the first informative park sign you come to.",
+          "audioTranscript": "“Hello! Welcome to Fort McHenry National Monument and Historic Shrine, birthplace of the National Anthem! On this tour you will learn the War of 1812 story of Fort McHenry and how the battles, stories, and people, made Baltimore the ORIGINAL “Home of the Brave.”\nBefore we begin, you should know that this tour does lead you into the Star Fort Historic Zone, which is a fee collection area, so if you haven’t paid for access to the fort you should head back to our visitor center, or purchase a Fort McHenry day pass or annual pass by going to recreation.gov on your phone. \n\nAs you begin this tour, reference the large concrete map before you as you learn how it is that Baltimore becomes the focal point of the War of 1812.\n\n On Thursday, June 18, 1812 President James Madison signed a Declaration of War against Great Britain. Many residents in Maryland, especially those in Baltimore—the 3rd largest city in the country as well as one of the nation’s leading ports--welcomed the news. Trade in the port of Baltimore had been greatly curtailed since the trade embargos with Great Britain and France enacted by Presidents Jefferson and Madison. During the rest of 1812 and into 1813, trade boomed in Baltimore. This was helped by the growing list of private ships went out to seize British merchant ships. They would confiscate the cargo and return to port to auction off whatever had been seized, keeping the profits. These privateers had an easy time of it until March of 1813. It was at this time that a fleet of British warships commanded by Rear Admiral George Cockburn sailed into the Chesapeake Bay. \n\nCapturing Baltimore privateers coming down the bay, Admiral Cockburn also proceeded to attack small towns along the Maryland’s eastern shore. The towns of Georgetown and Havre de Grace were attacked and burned. St. Michaels was attacked twice but managed to keep the British from entering the town. In April of that year, Cockburn sailed up the Patapsco within sight of Fort McHenry but did not attack.\n\nIn the spring of 1814, new admiral in charge of the British operations the Chesapeake, Alexander Cochrane issued a proclamation that all enslaved people in the Chesapeake region could gain their freedom by serving in the British forces against the United States. American fears of a slave insurrection grew, and more horror would come as 5,000 British regulars would enter the region having recently been freed up by defeating Napoleon. 1814 was a year of fear and horror for the people of Maryland as British raids and burnings increased, which eventually lead British forces up the Patuxent river trapping a small force of American ships close to its headwaters leading to Washington D.C., from which they began moving towards the nation’s capital. \n\nOn August 24, they roundly defeated American forces at the Battle of Bladensburg, clearing the way for an assault on Washington that evening. The British marched down Maryland Avenue through the heart of the city to burn the Capitol building, and then headed down Pennsylvania Avenue to burn the White House. \n\nBy mid-September, the British fleet had advanced to the Patapsco River where about 4,500 British troops landed at North Point and began an 11-mile march to Baltimore. As the land troops made their way toward the city, British warships moved up the Patapsco River toward Fort McHenry and the other defenses around the entrance to Baltimore Harbor.”",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/954F118C-CA3E-93EB-9A4F0B2EEA9973B3.mp3"
+        },
+        {
+          "significance": "Learn about some of the support structures that would have been located outside of the Star Fort structure.",
+          "assetId": "9DFA2250-4CAE-470E-A34F-0775AC2B20D9",
+          "assetName": "Brick Foundations",
+          "assetType": "places",
+          "id": "957C4A26-DF04-2818-34505E2D5AC6B0E7",
+          "ordinal": "2",
+          "directionsToNextStop": "Continue up the path towards the Star Fort, stopping when you immediately enter the wooden fenced area, facing the for cannon on the left.",
+          "audioTranscript": "“Notice the areas of brick to the left and right of the pathway. These brick rectangles represent foundations of buildings that would have been here during the War of 1812.\n\nThe first brick building outline was the Quartermaster & Ordnance Storehouse, which was approximately 100 feet long and had four rooms on the ground floor. The building was used for storage of quartermaster supplies (brooms, buckets, clothing, etc.), and to house a carpenter shop, a leather working shop and a gun shed where field guns and implements were placed to keep them out of the weather. The second floor had usable storage and workspace.\nThe next brick building outline, further up the path was the Ordnance/Commissary Storehouse, which was 75 feet long, and slightly wider than the first. It had three rooms on the ground floor (two in front and single long room in the rear). One room in front was used for the storage of ordnance stores, implements, tackle and rope for the great gun; the other room in front was used as a stable for officer’s horses. The long room in the rear was used for subsistence stores (food) and was there that rations were drawn.\nThe hospital was about 30 yards further and on the right of the road. It was a brick, two-and-a-half story building similar in size and construction to the commander’s quarters, but the fireplaces were on the ends. The hospital had its own kitchen, examination room, operating room, and two wards, one upstairs and the other on the first floor. \n\nFrom the hospital, the road ran along the post boundary to the wharf at the Patapsco River, where the Baltimore City fire boats are docked today. Along the right side of the road were several sheds and wooden buildings, as well as outside work areas, of which nothing remains today, but in 1814 played a significant part in the daily life of the garrison.\n\nThe post hospital at Fort McHenry was under the charge of Dr. William Stewart, Hospital Surgeon's Mate, U.S. Army Medical Department, 10th Military District. Dr. Stewart was authorized to employ four civilian medical staff: a matron and three nurses. The matron received $6 per month, plus daily rations, fuel and bedding straw, while the nurses received $5 per month, plus daily rations, fuel and bedding straw. For those not familiar with military organization, the 10th district was the command one level above Major Armistead. Oversight of hospital personnel was the direct responsibility of Dr. Stewart. Dr. Stewart also employed a civilian cook at the hospital. The hospital cook received $5 per month, plus daily rations, fuel and bedding straw.\n\nlooking up towards the main fort structure there would have been another structure just outside of where the wooden fence is today. This was a brick tavern owned by the Schwartzhouer family. Bricks in the grass indicate the corners of the tavern building. Across the road was a barn belonging to the establishment. The Army took over the structures under lease in 1821 and purchased the entire property in 1831. All of these buildings were important support structures to make Fort McHenry a livable place for soldiers stationed here to protect Baltimore’s harbor.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/9566DC8E-FABD-352F-FAE3A22D685B87D8.mp3"
+        },
+        {
+          "significance": "Learn about the water batteries that were constructed along the banks of the peninsula to help reinforce Fort McHenry's defense.",
+          "assetId": "C202D806-4B89-4784-866E-6FA46948BA8D",
+          "assetName": "Water Battery",
+          "assetType": "places",
+          "id": "9590A584-080B-79BB-5DBAAD4FADCCBCE9",
+          "ordinal": "3",
+          "directionsToNextStop": "Continue inside of the Star Fort structure, going to the first large building on your left.",
+          "audioTranscript": "Quick reminder: if you haven’t purchased your Fort McHenry day pass or annual pass you are not permitted access to the fort. Again, you can head to the visitor center to purchase a pass or go to recreation.gov. Thank you.\n\nThe earth mounds with 4 cannon on a wooden deck in front of you are reconstructed to represent the water batteries which were the main defenses at Fort McHenry that were located outside of the star fort itself. Under the direction of Captain Samuel Babcock, U.S. Army Engineers, civilian laborers, along with members of the First Marine Artillery of the Union, worked throughout the summer of 1813 on improving the Upper and Lower Water Batteries and mounting 18- and 36-pounder naval guns. \n\nAbout 150 feet up the hill from the southeast edge of the Parade Ground was the Upper Water Battery, also known as the “Old Battery.” This was a J-shaped earthwork originally built in 1776 as part of the works at Fort Whetston. In 1813 the works were improved under the direction of Captain Samuel Babcock, U.S. Army Engineers. The battery initially mounted six guns of 18- and 36-pounder size, with at least three more added prior to the battle in 1814.\n\nMagazines were used to hold and protect ammunition, particularly powder and slow match. A 10’ x 20’ brick magazine was located to the rear and just to the left center of the battery. A second, larger (20’ x 20’) magazine was built next to the first, but it is unclear if this was before or after the battle. \n\nThe  Lower Water Battery (located in the Northeast Section) was also dated from 1776. In the summer of 1813, the parapet was rebuilt and extended around the south point of the fort in order to cover the Middle Branch of the Patapsco River. While the parapet was continuous, the guns were mounted in three sections. The Northeastern Section was located just below the Upper Water Battery This section was shaped in a zig-zag fashion. It had a wooden platform and mounted eleven 36-pounder guns. \n\nBrick hotshot furnaces were located at both the upper and lower water batteries. These ovens would heat solid shot cannonballs with the intention of making them able to not only hit British ships, but also set them ablaze. \n\nReference the near by park signage or your park brochure which show a painting depicting the bombardment of Fort McHenry to see the full design of these water battery defenses.\n\nIt would be these guns that were most important to keeping the British ships at bay during the bombardment on September 13-14, 1814.  When the British ships fired upon the fort, they did so from a distance of approximately two miles offshore. The American guns from these batteries only had a range of a mile and a half making them obsolete during most of the battle, though they could keep the British vessels from landing on shore or entering the harbor.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/957F3A7F-FB56-E7BF-FA6B4290AD55B9AC.mp3"
+        },
+        {
+          "significance": "The barracks were the buildings that soldiers lived in at Fort McHenry. Learn about the daily lives of a War of 1812 soldier at the fort.",
+          "assetId": "5642E1E5-F043-4B95-B2DD-CD47DE9DAB5C",
+          "assetName": "Barracks No. 1",
+          "assetType": "places",
+          "id": "95A76135-91CB-FBEC-7A6A3FF8D2325D01",
+          "ordinal": "4",
+          "directionsToNextStop": "Head back towards the entrance to the Star Fort, turning to head up the ramp on your right before you leave the fort structure stopping at the point of the fort wall over looking the water.",
+          "audioTranscript": "The room on the far right of the first Barracks building, you will notice several bunkbeds and various uniform items neatly placed about the room. This room represents how soldiers would have lived in these buildings during the War of 1812.\n\nAt the beginning of the War of 1812, men who enlisted in the Regular Army had a five-year commitment, and while most of the men who enlisted were between the ages of 18 and 35, there were a considerable number of men who served that were in their 50s and 60s as well. In 1812, Privates were paid $5 a month. In addition, every soldier received a bounty of $31 and 160 acres of land. However, because enlistments fell far short of requirements, Congress gradually increased the incentives so that by the end of 1813, recruits were enlisting for the duration of the war rather than five-years, pay was increased by $3 per month to $8, and the bounty was raised to $124 and 320 acres of land. \n\nThroughout the year, the soldiers at Fort McHenry arose at 5:30 A.M. to the sounds of reveille played by the fifes and drums. Bed sacks were doubled to the head of the bunks, with the blankets doubled from the length, turned together in three folds, and laid on top. The rooms were then swept clean, so that no straw or litter was left under the bunks or in the corners.\n\nHalf an hour after reveille, the assembly was sounded, and every man, except the sick, and those already on duty, formed on the parade and the roll was called by the first sergeant. The officer of the day inspected the parade, while the quartermaster went through the barrack-rooms, to ensure that they were clean, in good order, and that every man was turned out. The men were then dismissed back to their barracks, while the first sergeant proceeded to the adjutant's room with his morning report. \n\nA few minutes before breakfast, the sergeants went through the rooms to see that every man was present and that the tables were properly placed, with the utensils laid out ready for the sound of the breakfast call. The bedding was then taken out, (weather permitting), and left to air in whatever place was most convenient for the purpose. This was done under the direction of the quartermaster, who insured that the passages and avenues about the garrison were kept thoroughly clean. The men then employed themselves in getting ready for guard duty or parade.\n\nAt about eight o'clock, the fort's commander made his first round of the quarters, guard house, and hospital, attending to the general good order and cleanliness of the garrison. Junior officers were to be in readiness to attend the commander, should he require them to do so. \n\nThe general morning parade was, in the summer season, held at nine, and in the winter, at ten o'clock. At three quarters of an hour before all general parades, musicians call was sounded by the duty drummer — at this time, the non-commissioned officers and musicians turned out for inspection by the officer of the day. At the call for morning parade, all the men were formed, and the junior officers inspected their men. \n\nMen selected for fatigue duty and those reporting for sick call were formed separately under their respective non-commissioned officers. The captain then proceeds to size the company, with the shortest man in the center and the tallest men on the flanks and organize it into four sections. The captain then marched his company to the place designated for the morning drill and maneuvered his men for two or three hours.\n\nAt noon, the men were marched back to their barracks and were given one hour for lunch. In the afternoon the men were reformed for artillery drill. Three-quarters of an hour before the general evening parade, all the troops were assembled by the officer of the day for inspection. The men were then allowed to stack arms and walk about freely until the sounding of assembly. In the summer this was at half past five o'clock, and in the winter at four o'clock.\n\nDinner call sounded at six-thirty after which the men could lark, sing, play games, and discuss the rumors of the day. At ten the drums and fifes played tattoo; at which time, letters were finished, the last song was sung, and the games put away. At half past ten taps were sounded, and the lights were put out.\n\nOn Sunday, church parade followed the morning parade, after which the Articles of War were read. At mid-day a general dress parade was held, with the remainder of the day at the disposal of the men, \"and it was hoped that no abuse would be made of the indulgence.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/9594848D-9A53-EF92-0CEBBBE5BC0B8078.mp3"
+        },
+        {
+          "significance": "From Bastion 5 you can see the point of British attack. Learn about the start of the battle and how Francis Scott Key observed it to help inspire the Star-Spangled Banner.",
+          "assetId": "E9F3B417-0AC1-44EE-A553-9884B8B44E1E",
+          "assetName": "Bastion 5",
+          "assetType": "places",
+          "id": "95BE99F7-B08E-4957-AED97B80EC443E49",
+          "ordinal": "5",
+          "directionsToNextStop": "Follow the brick path on top of the fort wall to your right stopping at the nest part of the wall that comes to a point.",
+          "audioTranscript": "Following the battle at North Point, the Americans retreated to Baltimore. At Hampstead Hill, the city’s main defense, the British faced over 60 cannons and between 15-18 thousand men within well-constructed earthworks.\n\nTo take Baltimore the British navy would have to sail into Baltimore to assist the army’s attack on the city.\n\nEarly in the morning of September 13, 1814, 17 ships of the British navy sailed up the Patapsco river heading for Baltimore, the third largest city in the United States.\n\nThe main defense along the Patapsco was Fort McHenry. Located on a peninsula two miles from the city, the fort covered the water approaches to the northeast and northwest of the city\nTo the northwest, in the Ferry Branch of the river, were three small forts, Battery Babcock, Forts Covington and Lookout.\nAt Fort McHenry, commanded by Major George Armistead of the U.S. Corps of Artillery, were over 1000 defenders made up of U.S. Army regulars and state militia. With 23 cannons in the fort and 20 on the water battery Fort McHenry could sink any ship within of a range mile and a half.\n\nTo the east, in the Northeast Branch, across the river from Fort McHenry was the 3-gun Lazzaretto Battery, manned by the Chesapeake flotilla.\n\nIn the channel, a line of merchant ships was sunk to obstruct the entry into Baltimore. Behind the sunken ships were 11 gun barges the size of large rowboats, each had a cannon in the bow and one in the stern. Across the narrow channel was also a boom chain in front of the sunken ships.  \n\nAt 6 o’clock in the morning of the 13th, The British ships under the command of Admiral Cochrane approached Fort McHenry. \nThe five bomb ships, with names designed to inspire fear, HMS AETNA, DEVESTATION, METEOR, TERROR and VOLCANO, capable of firing a mortar shell two miles, and the rocket ship EREBUS, began the bombardment of the fort at 6:30 a.m. During the next 25 hours, under a heavy rainstorm for most of the time, 15-18 hundred bombs and rockets would be fired at the fort.\n\nWatching the bombardment aboard a Baltimore packet ship, leased as a truce vessel, was Francis Scott Key. Key was a local lawyer who had been sent by the United States Government to negotiate the release of a U.S. citizen who had been taken prisoner by British forces, a Dr. William Beanes. Although Key was successful in negotiating for the release of Dr. Beanes, British leadership realized he might have overheard plans for the attack on Baltimore, so Key’s ship was detained from leaving the British fleet until the battle was over. Francis Scott Key would be forced to watch the battle from three miles offshore from where you are now. For reference the bridge you see in the distance is 4 miles away.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/95AA01DD-DB86-71F2-76580958C356B298.mp3"
+        },
+        {
+          "significance": "From Bastion 4 visitors can see the areas where the British attempted a desperate diversionary attack, and were forced back by American artillery.",
+          "assetId": "1561AC93-B721-4ABA-A29E-1F5DE5CCDD57",
+          "assetName": "Bastion 4",
+          "assetType": "places",
+          "id": "95D049E4-E8F5-7B66-BC5782259DF62020",
+          "ordinal": "6",
+          "directionsToNextStop": "Continue along the brick path on top of the walls stopping at the next part of the walls that come to a point.",
+          "audioTranscript": "As the bombardment continued during the evening of September 13th, the night became thickly dark as a line of thunderstorms passed over the region, bring unseasonably cold temperatures. Soldiers, sailors, and marines on both sides huddled in the open under pouring rain.\n\nColonel Brooke, in charge of the 4,500 British troops camped North East of the city,  received a communication from Admiral Cochrane that stated, \"in consequence of the entrance of the harbor being closed up by vessels sunk for that purpose by the enemy, a naval co-operation against the town and camp was found impracticable.\"  After deliberating with his officers, Brooke decided that \"the capture of the town would not have been a sufficient equivalent to the loss which might probably be sustained in storming the heights.\" He informed the admiral that he had ordered a \"retreat to take place” the following morning.\"\n\nSeptember 14: Admiral Cochrane received word of Colonel Brookes decision not to attack, too late to abort a diversionary raid up the Middle Branch of the Patapsco River. Shortly after 12:30 a.m. on the Wednesday morning, September 14th, Lieutenant Napier's force of Royal Marines and several hundred seamen in 20 vessels, accompanied by the rocket ship HMS Erebus, made their way, as silently as possible, up the river. \n\nAmerican Sailing-Master John Webster at Battery Babcock, and Lieutenant Newcomb at Fort Covington, both claimed the honor of having first spotted the British force. Both positions opened fire and were soon joined by the guns at Fort Lookout Hill commanded by Lieutenant George Budd. The British returned fire and the witnesses were \"presented the whole awful spectacle of shot and shells, and rockets, shooting and bursting through the air... as the darkness increased the awful grandeur of the scene...\" \n\n\"Fort Covington, the Lazaretto, and the American barges in the river now simultaneously poured a galling fire upon the unprotected enemy... as they endeavored to regain their ships, which came closer to the fortifications in an endeavor to protect the retreat. A fierce battle ensued and the British were forced to withdraw their ships.\n\nThere was a brief lull in the firing around 4:00 a.m., then the British ships continued their bombardment until 7:00 a.m.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/95C1D8D4-E0A4-B133-0E49B70C5F62F193.mp3"
+        },
+        {
+          "significance": "Bastion 3 saw several direct hits during the battle. Learn how many men stationed here were killed or wounded.",
+          "assetId": "CAECA9AB-5029-40D1-8939-9D8A68C1CA14",
+          "assetName": "Bastion 3",
+          "assetType": "places",
+          "id": "95E011AB-9CD0-9F82-324DDFD7C54DBB98",
+          "ordinal": "7",
+          "directionsToNextStop": "Continue down the steps to the main level of the fort grounds. Walk out to the parade ground area stopping at the barn shaped structure.",
+          "audioTranscript": "Here at bastion 3 some of the most direct hits on the fort were recorded, making it one of the most dangerous places to be during the battle. Pvt. Isaac Monroe, who was an editor of the Baltimore Patriot and standing untouched with the gun crew here on bastion three, described the direct hits as follows:\n\n“By early afternoon September 13th, a nor’easter brought heavy showers and rain on Captain Nicholson’s Baltimore Fencibles Artillery gun crew. At 2pm a bomb would slam into Bastion 3 instantly killing Lt. Levi Claggett and severely wounding four other men. A 24 pounder was knocked off its carriage. A second bomb would burst over the bastion. Shrapnel the size of a silver dollar tore through Sergeant John Clemm killing him on the spot. These were citizen soldiers, two of the four men killed during the bombardment and were prominent flour merchants and investors in Baltimore’s Privateer trade.”",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/95D229E8-BD11-E3D9-13662D63ABA4314B.mp3"
+        },
+        {
+          "significance": "The powder magazine was hit during the bombardment of Fort McHenry. Learned how the fort survived and the story of some of the soldiers whose fate relied upon the powder magazine's survival.",
+          "assetId": "1B88A93C-5F79-4B2C-8153-854DB2A6FF55",
+          "assetName": "Star Fort Powder Magazine",
+          "assetType": "places",
+          "id": "95F82093-EF44-4E2E-D2DFB70132D82055",
+          "ordinal": "8",
+          "directionsToNextStop": "Move across the parade ground to the large white flag pole near the entrance of the fort.",
+          "audioTranscript": "The Powder magazine was the life blood of the fort during battle. This building stored gunpowder and munitions needed to keep the cannon functional. But that also made the building vulnerable to any sort of flame or sparks that could cause the gun powder to ignite. The building was struck during the bombardment causing part of the roof to collapse, but luckily for the American defenders, the British bomb that struck the building did not explode, meaning the materials inside did not ignite which would have caused a massive explosion, likely causing the fort to fall.\n\nOn the opposite side of the fort wall behind this building is the fort’s dry moat. Stationed in the dry moat were the 38th, 36th, 14th and 12th U.S. Infantry units, a total of 600 US Regulars, sheltering from the bombardment.\n\nThe name William Williams is listed with the names of other recruits on the muster roll of the 38th U.S. Infantry. It seems like any other name, but this name is an alias, a name made up to protect the identity of a young Marylander escaping slavery by joining the United States Army. Federal law at the time said that enslaved persons could not join the army because they \"could make no valid contract with the government\" and it was often necessary for freedom seekers (those escaping slavery to obtain the basic human right of freedom) to create new identities in order to get jobs of any kind.\n\n“Williams” was the name used by Frederick Hall, or a man who “sometimes calls himself Frederick Hall,” according to an escaped slave ad placed in the newspaper with a Forty Dollar Reward by Benjamin Oden. Hall was 21 when he sought his freedom from slavery in Prince Georges County and enlisted on April 14, 1814.\nHall was enlisted as a private in the U.S. Army and was assigned to the 38th U.S. Infantry Regiment. The officer who enlisted William Williams did not question him. Perhaps, William (or Frederick) was able to pass, or move within white society as a white person in order to survive. The newspaper ad posted by Benjamin Oden describes Hall as \"a bright mulatto and so fare, as to show freckles,\" which may mean that he was a light-skinned man. Perhaps the officer was in desperate need of soldiers and looked the other way. Maybe the officer was a man who did not believe in slavery or even wanted to help freedom seekers. Whatever the case, Williams received his enlistment bounty of $50 and was paid a private's wage of $8 per month.\n\nIn early September 1814, the 38th U.S. Infantry was ordered to march to Fort McHenry. During the bombardment, Williams would have been sheltering with his regiment on the opposite side of fort wall behind this building. A month after the battle Williams entered the hospital with tuberculosis, dying from disease during his service in March of 1815.\n\nWilliams was not the only black man to serve in the armed services during the War of 1812. There are numerous records of black sailors. George Roberts, a free black, served on the privateers Chasseur (\"Pride of Baltimore\") and Sarah Ann. Charles Ball was a Seaman in Commodore Joshua Barney's U.S. Chesapeake Flotilla who later published his memoirs in 1836.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/95E30B23-B8FB-CA89-0860855521A700F2.mp3"
+        },
+        {
+          "significance": "The location of where the original Star-Spangled Banner flag flew during the bombardment of Fort McHenry, the site of which inspired Francis Scott Key to write our modern day National Anthem.",
+          "assetId": "0E09F586-2497-4099-99F8-B944E3955546",
+          "assetName": "Flag Pole",
+          "assetType": "places",
+          "id": "96354C4F-90EA-8097-433421399BF27C08",
+          "ordinal": "9",
+          "directionsToNextStop": "Exit the Star Fort Historic Zone following the path back down towards the visitor center. Go around the visitor center to the side the faces the parking lot. Follow the sidewalk along the visitor center stopping at the first statue you come to.",
+          "audioTranscript": "During the War of 1812, the people of Baltimore believed that the British would attack the city. Not knowing for sure when an attack would occur, they spent months preparing for it. Everything was made ready at Fort McHenry to defend Baltimore.\nMajor George Armistead, the Fort’s commanding officer, desired \"to have a flag so large that the British will have no difficulty in seeing it from a distance.\"\n\nIn the summer of 1813, Armistead ordered a large garrison flag (30 feet by 42 feet) as well as with a smaller storm flag (17 feet by 25 feet) for the Fort. The job went out to a 37-year-old widow, Mary Pickersgill, a ship and signal flag maker. She labored for seven weeks with her 13-year-old daughter, Caroline, two nieces, 13-year-old Eliza Young and 15-year-old Margaret Young, a 13-year-old African-American indentured servant, Grace Wisher, and possibly her mother, Rebecca Young, who had taught her the trade. They pieced together strips of loosely woven English wool bunting then laid the whole flag out on the expansive floor of a brewery near Mrs. Pickersgill’s Pratt Street house, now the Star-Spangled Banner House museum. The flags were finished on August 19, 1813.\n\nThe larger of the two flags had stripes two feet wide, and stars 24 inches from point to point. At that time, it was the practice to add one star and stripe for each new state joining the Union. In 1814, the United States flag had 15 stars and 15 stripes.\n\nThroughout the night of the bombardment the smaller 17x25 foot storm flag flew over the fort. The next morning after the British ships had stopped firing and the smoke and fog cleared, Major Armistead ordered the flag lowered replaced by the much larger 30x42 foot garrison flag. Offshore looking anxiously towards the fort, Francis Scott Key waited for a sign of who had won the battle. The site of the massive garrison flag being raised over the fort inspired him to write the words to \"The Star-Spangled Banner,\" our modern-day National Anthem. Today this flag is displayed in the Smithsonian Institution's National Museum of American History, Washington, D.C. The smaller storm flag, which was the flag that flew during the rainy bombardment, has been lost to history.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/961EDCB4-0715-9649-854E37712C178758.mp3"
+        },
+        {
+          "significance": "The monument dedicated to Major George Armistead, commander of the defense of Fort McHenry.",
+          "assetId": "5F4CC3A0-B995-45D4-8898-A6547BC5A5C8",
+          "assetName": "Armistead Plaza",
+          "assetType": "places",
+          "id": "964621D8-9E0B-EAAF-6C1CC8530BC5F456",
+          "ordinal": "10",
+          "directionsToNextStop": "continue along the side walk path taking the first path that turns to the left that you come to. Stop at the large statue that you come to.",
+          "audioTranscript": "Born on April 10, 1780, in Caroline County, Virginia, George was one of five brothers, all of whom later served in the War of 1812. On May 18, 1813, while serving as an artillery officer at Fort Niagara, New York, he took an active part in the American attack on Fort George across the Niagara River in upper Canada and was accorded the honor of delivering the captured British flags to President James Madison. On his taking command of Fort McHenry in June 1813, Armistead ordered a flag made \"so large that the British will have no difficulty in seeing it from a distance.\" He earned his enduring place in American history under that flag at Fort McHenry whose stalwart defense of Baltimore against British attack in 1814 inspired Francis Scott Key to write \"The Star-Spangled Banner.\" Armistead remained in command of the fort until his untimely death at age 38 on April 25, 1818. He is buried in Old St. Paul's Cemetery, Baltimore, Maryland.\n\nThis statue was dedicated to Major Armistead for the centennial anniversary of the battle in 1914 and has been moved several times before ending up in this spot in 2010.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/9637A016-DCFE-DECC-311CF2219EA00749.mp3"
+        },
+        {
+          "significance": "Dedicated to Francis Scott Key and the defenders of Baltimore, learn how the memory of the War of 1812 and the Star-Spangled Banner were being recognized by the government before even being made into the National Anthem.",
+          "assetId": "C6A3E637-977E-48BA-AC7C-CDC4AD7A428C",
+          "assetName": "Orpheus Statue",
+          "assetType": "places",
+          "id": "96557445-9584-94A3-5CC5F353F513FBDE",
+          "ordinal": "11",
+          "directionsToNextStop": "",
+          "audioTranscript": "Many visitors to the Fort wonder why there is a statue of Orpheus, the Greek mythological hero of music and poetry, at the park. This classical monument is dedicated to Francis Scott Key and the soldiers and sailors who took part in the Battle of North Point and the defense of Fort McHenry during the War of 1812.\n\nIn 1914, Congress appropriated $75,000 for a monument at Fort McHenry to mark the centennial of the writing of “The Star-Spangled Banner” and the defense of Baltimore. A national competition was held by the “Fine Arts Commission” on May 28, 1916. One of the 34 entries was a design by Charles H. Niehaus. His work, called Orpheus with the Awkward Foot was chosen.\n\nThere was a delay erecting the statue due to World War I. Finally, the statue was completed, and a dedication was held on Flag Day, June 14, 1922. The ceremony was attended by President Warren G. Harding.The statue was originally placed in the middle of the entrance road with a circular drive around it. In 1962, Orpheus was relocated to the present site.\n\nThe monument consists of a 15-foot high circular base made of white marble. Decorated with a frieze in low relief, the base is surmounted by a 24-foot high figure of Orpheus in bronze, shown playing a five-stringed tortoise-shell lyre. The frieze starts with a portrait shield of Key and the dedication, then continues around the drum of the base with a representation of the classic muses paying honor to the army and navy.\n\nThe marble base bears a medallion honoring Francis Scott Key, flanked by a procession of allegorical figures. The pedestal contains a time capsule filled with documents of patriotic and historical interest. Although the time capsule was opened in 1962, there are no plans to open it in the future.\n\nThe inscription on the base reads:\n\nTo Francis Scott Key - Author of the Star-Spangled Banner and to the soldiers and sailors who took part in the Battle of North Point and the defense of Fort McHenry in the War of 1812.",
+          "audioFileUrl": "https://www.nps.gov/common/uploads/tours/9647FAB7-E4CC-C1FB-CEA6E49C7AA0E1B3.mp3"
+        }
+      ],
+      "images": [
+        {
+          "credit": "NPS/Tim Ervin",
+          "crops": [
+            {
+              "aspectRatio": 1.78,
+              "url": "https://www.nps.gov/common/uploads/tours/primary/952DA944-A26F-FE8A-7998B0A616F57A08.jpg"
+            },
+            {
+              "aspectRatio": 1,
+              "url": "https://www.nps.gov/common/uploads/tours/secondary/952DA944-A26F-FE8A-7998B0A616F57A08.jpg"
+            }
+          ],
+          "title": "1812 tour photo",
+          "altText": "Two living historians in 1812 gear posing in front of the large garrison flag.",
+          "caption": "Living historians dressed as War of 1812 soldiers.",
+          "url": "https://www.nps.gov/common/uploads/tours/952DA944-A26F-FE8A-7998B0A616F57A08.jpg"
+        }
+      ],
+      "relevanceScore": 1
+    }
+  ]
+}
