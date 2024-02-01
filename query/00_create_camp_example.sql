@@ -5,6 +5,10 @@ A relational database defines a set of tables with typed columns
 - A table is similar to a set of objects
 - In Edgar Codd's original paper, he used the word relations for tables
 - You can think of a table like a spreadsheet with named columns (fields) and rows (records)
+
+Use these settings in your sqlite3 shell to get pretty output:
+sqlite> .header on
+sqlite> .mode table
 */
 /*
 Here's an example table about campgrounds:
