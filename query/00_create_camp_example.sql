@@ -16,14 +16,12 @@ If you want to install sqlite3, first check if you have it already:
 - Open a terminal
 - Type "sqlite3" and press enter
 ```bash
-sqlite3
+sqlite3 ./data/nps.sqlite
 ```
 - If you see a prompt like "sqlite>", then you have sqlite3 installed
 ```bash
 SQLite version 3.43.2 2023-10-10 13:08:14
 Enter ".help" for usage hints.
-Connected to a transient in-memory database.
-Use ".open FILENAME" to reopen on a persistent database.
 sqlite>
 ```
 
@@ -39,6 +37,14 @@ If you don't already have it, this is how to install sqlite3:
 mv ~/Downloads/sqlite-tools-osx-x64-3450100/sqlite3 /usr/local/bin
 ```
 - Now you should be able to run `sqlite3` from the command line
+```bash
+sqlite3 ./data/nps.sqlite
+```
+```bash
+SQLite version 3.43.2 2023-10-10 13:08:14
+Enter ".help" for usage hints.
+sqlite>
+```
 
 Use these settings in your sqlite3 shell locally to get pretty output:
 sqlite> .header on
