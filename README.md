@@ -110,20 +110,60 @@ select count(1) from tour;
 Expected output:
 
 ```bash
-sqlite> select count(1) from amenity_season;
-4
-sqlite> select count(1) from campground;
-638
-sqlite> select count(1) from campground_fee;
-1148
-sqlite> select count(1) from duration;
-4
-sqlite> select count(1) from park;
-471
-sqlite> select count(1) from park_fee;
-522
-sqlite> select count(1) from state_code;
-54
-sqlite> select count(1) from tour;
-617
+D select count(1) from amenity_season;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│        4 │
+└──────────┘
+D select count(1) from campground;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│      638 │
+└──────────┘
+D select count(1) from campground_fee;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│     1148 │
+└──────────┘
+D select count(1) from duration;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│        4 │
+└──────────┘
+D select count(1) from park;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│      471 │
+└──────────┘
+D select count(1) from park_fee;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│      522 │
+└──────────┘
+D select count(1) from state_code;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│       54 │
+└──────────┘
+D select count(1) from tour;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│      617 │
+└──────────┘
 ```
