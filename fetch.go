@@ -1149,7 +1149,6 @@ type NpsClient struct {
 	Client    *http.Client
 	Key       string
 	base      string
-	resources []string
 }
 
 func makeNpsClient(key string) *NpsClient {
@@ -1204,10 +1203,10 @@ func writeJson[R Resource](client *NpsClient, resource string) string {
 		return filename
 	}
 	file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	defer file.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer file.Close()
 	encoder := json.NewEncoder(file)
 	current := 0
 	one := getOne[R](client, resource, current)
@@ -1232,25 +1231,25 @@ func writeJson[R Resource](client *NpsClient, resource string) string {
 
 func writeSql[R Resource](resource string) {
 	jsonFile, err := os.Open(fmt.Sprintf("data/%s.jsonl", resource))
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer jsonFile.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
 	sqlduckCreateFile, err := os.OpenFile("data/duckdb/create.sql", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer sqlduckCreateFile.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
 	sqliteCreateFile, err := os.OpenFile("data/sqlite/create.sql", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer sqliteCreateFile.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
 	sqlInsertFile, err := os.OpenFile(fmt.Sprintf("data/insert/%s.sql", resource), os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	defer sqlInsertFile.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer sqlInsertFile.Close()
 	current := 0
 	scanner := bufio.NewScanner(jsonFile)
 	const maxCapacity = 512 * 1024 // 512KB
@@ -1289,28 +1288,28 @@ func writeSql[R Resource](resource string) {
 
 func writeSqlCreate() {
 	sqlduckFile, err := os.OpenFile("data/duckdb/create.sql", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	defer sqlduckFile.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer sqlduckFile.Close()
 	_, err = sqlduckFile.WriteString(SqlduckCreate)
 	if err != nil {
 		log.Fatal(err)
 	}
 	sqliteFile, err := os.OpenFile("data/sqlite/create.sql", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	defer sqliteFile.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer sqliteFile.Close()
 	_, err = sqliteFile.WriteString(SqliteCreate)
 	if err != nil {
 		log.Fatal(err)
 	}
 	sqlInsertFile, err := os.OpenFile("data/insert/create.sql", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	defer sqlInsertFile.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer sqlInsertFile.Close()
 	for key, value := range amenitySeasons {
 		_, err = sqlInsertFile.WriteString(fmt.Sprintf(
 			"INSERT INTO amenity_season (id, name) VALUES (%d,'%s');\n",
