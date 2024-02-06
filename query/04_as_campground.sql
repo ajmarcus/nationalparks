@@ -18,6 +18,19 @@ FROM
 -- | 638             |
 -- +-----------------+
 /*
+The AS is not required - you can use a space and a string like this
+*/
+SELECT
+    COUNT(1) num_campgrounds
+FROM
+    campground;
+-- result
+-- +-----------------+
+-- | num_campgrounds |
+-- +-----------------+
+-- | 638             |
+-- +-----------------+
+/*
 We can also use the AS keyword to rename a table in the query
 
 By default you can refer to column using the full table name
@@ -85,19 +98,22 @@ LIMIT 1;
 -- +----------------------+----------------------------+
 /*
 The AS keyword is not required
-We can rename columns with a space and a string
+We can also rename tables with a space and a string
 This is the same as the last query
 */
 SELECT
-    c.name camp_name
+    c.name,
+    p.name
 FROM
-    campground c;
+    campground c,
+    park p
+LIMIT 1;
 -- result
--- +-----------------+
--- | camp_name |
--- +-----------------+
--- | 638             |
--- +-----------------+
+-- +----------------------+----------------------------+
+-- |         name         |            name            |
+-- +----------------------+----------------------------+
+-- | 277 North Campground | Abraham Lincoln Birthplace |
+-- +----------------------+----------------------------+
 /*
 Everything else is identical about the query
 

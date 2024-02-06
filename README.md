@@ -71,11 +71,11 @@ sqlite> select count(1) from duration;
 sqlite> select count(1) from park;
 471
 sqlite> select count(1) from park_fee;
-522
+523
 sqlite> select count(1) from state_code;
 54
 sqlite> select count(1) from tour;
-617
+618
 ```
 
 6. Start duckdb
@@ -150,7 +150,7 @@ D select count(1) from park_fee;
 │ count(1) │
 │  int64   │
 ├──────────┤
-│      522 │
+│      523 │
 └──────────┘
 D select count(1) from state_code;
 ┌──────────┐
@@ -164,6 +164,6 @@ D select count(1) from tour;
 │ count(1) │
 │  int64   │
 ├──────────┤
-│      617 │
+│      618 │
 └──────────┘
 ```

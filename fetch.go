@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -15,35 +16,35 @@ import (
 
 const SqlduckCreate = `CREATE SEQUENCE amenity_season_id_seq START 1;
 	CREATE TABLE amenity_season (
-		id UINTEGER DEFAULT nextval('amenity_season_id_seq') PRIMARY KEY,
-		name VARCHAR(63)
+		id UINTEGER DEFAULT nextval('amenity_season_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(63) NOT NULL
 	);
 	INSERT INTO amenity_season (id, name) VALUES (0, 'None');
 	CREATE SEQUENCE duration_id_seq START 1;
 	CREATE TABLE duration (
-		id UINTEGER DEFAULT nextval('duration_id_seq') PRIMARY KEY,
-		name CHAR(1)
+		id UINTEGER DEFAULT nextval('duration_id_seq') PRIMARY KEY NOT NULL,
+		name CHAR(1) NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
 	CREATE SEQUENCE state_code_id_seq START 1;
 	CREATE TABLE state_code (
-		id UINTEGER DEFAULT nextval('state_code_id_seq') PRIMARY KEY,
-		name CHAR(2)
+		id UINTEGER DEFAULT nextval('state_code_id_seq') PRIMARY KEY NOT NULL,
+		name CHAR(2) NOT NULL
 	);
 	INSERT INTO state_code (id, name) VALUES (0, 'NA');`
 const SqliteCreate = `CREATE TABLE amenity_season (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL
 	);
 	INSERT INTO amenity_season (id, name) VALUES (0, 'None');
 	CREATE TABLE duration (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
 	CREATE TABLE state_code (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL
 	);
 	INSERT INTO state_code (id, name) VALUES (0, 'NA');`
 
@@ -819,18 +820,18 @@ func (c Campgrounds) SizeTotal() int {
 func (c Campgrounds) SqlduckCreate() string {
 	return `CREATE SEQUENCE campground_id_seq START 1;
 		CREATE TABLE campground (
-		id UINTEGER DEFAULT nextval('campground_id_seq') PRIMARY KEY,
-		name VARCHAR(255),
-		campsites_electrical_hookups UINTEGER,
-		campsites_first_come_first_serve UINTEGER,
-		campsites_reservable UINTEGER,
-		campsites_total UINTEGER,
-		has_camp_store_id UINTEGER,
-		has_cell_phone_reception_id UINTEGER,
-		has_laundry_id UINTEGER,
-		is_rv_allowed UINTEGER,
-		park_id UINTEGER,
-		reservation_url VARCHAR(255),
+		id UINTEGER DEFAULT nextval('campground_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(255) NOT NULL,
+		campsites_electrical_hookups UINTEGER NOT NULL,
+		campsites_first_come_first_serve UINTEGER NOT NULL,
+		campsites_reservable UINTEGER NOT NULL,
+		campsites_total UINTEGER NOT NULL,
+		has_camp_store_id UINTEGER NOT NULL,
+		has_cell_phone_reception_id UINTEGER NOT NULL,
+		has_laundry_id UINTEGER NOT NULL,
+		is_rv_allowed UINTEGER NOT NULL,
+		park_id UINTEGER NOT NULL,
+		reservation_url VARCHAR(255) NOT NULL,
 		FOREIGN KEY (has_camp_store_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
@@ -838,38 +839,38 @@ func (c Campgrounds) SqlduckCreate() string {
 	);
 	CREATE SEQUENCE campground_fee_id_seq START 1;
 	CREATE TABLE campground_fee (
-		id UINTEGER DEFAULT nextval('campground_fee_id_seq') PRIMARY KEY,
-		campground_id UINTEGER,
-		name VARCHAR(255),
-		cost_cents UINTEGER,
+		id UINTEGER DEFAULT nextval('campground_fee_id_seq') PRIMARY KEY NOT NULL,
+		campground_id UINTEGER NOT NULL,
+		name VARCHAR(255) NOT NULL,
+		cost_cents UINTEGER NOT NULL,
 		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);`
 }
 
 func (c Campgrounds) SqliteCreate() string {
 	return `CREATE TABLE campground (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT,
-		campsites_electrical_hookups INTEGER,
-		campsites_first_come_first_serve INTEGER,
-		campsites_reservable INTEGER,
-		campsites_total INTEGER,
-		has_camp_store_id INTEGER,
-		has_cell_phone_reception_id INTEGER,
-		has_laundry_id INTEGER,
-		is_rv_allowed INTEGER,
-		park_id INTEGER,
-		reservation_url TEXT,
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL,
+		campsites_electrical_hookups INTEGER NOT NULL,
+		campsites_first_come_first_serve INTEGER NOT NULL,
+		campsites_reservable INTEGER NOT NULL,
+		campsites_total INTEGER NOT NULL,
+		has_camp_store_id INTEGER NOT NULL,
+		has_cell_phone_reception_id INTEGER NOT NULL,
+		has_laundry_id INTEGER NOT NULL,
+		is_rv_allowed INTEGER NOT NULL,
+		park_id INTEGER NOT NULL,
+		reservation_url TEXT NOT NULL,
 		FOREIGN KEY (has_camp_store_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (park_id) REFERENCES park(id)
 	);
 	CREATE TABLE campground_fee (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		campground_id INTEGER,
-		name TEXT,
-		cost_cents INTEGER,
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		campground_id INTEGER NOT NULL,
+		name TEXT NOT NULL,
+		cost_cents INTEGER NOT NULL,
 		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);`
 }
@@ -979,39 +980,37 @@ func (p Parks) SizeTotal() int {
 func (p Parks) SqlduckCreate() string {
 	return `CREATE SEQUENCE park_id_seq START 1;
 		CREATE TABLE park (
-		id UINTEGER DEFAULT nextval('park_id_seq') PRIMARY KEY,
-		name VARCHAR(255),
-		city VARCHAR(255),
-		description TEXT,
-		state_code_id UINTEGER,
-		url VARCHAR(255),
+		id UINTEGER DEFAULT nextval('park_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(255) NOT NULL,
+		city VARCHAR(255) NOT NULL,
+		state_code_id UINTEGER NOT NULL,
+		url VARCHAR(255) NOT NULL,
 		FOREIGN KEY (state_code_id) REFERENCES state_code(id)
 	);
 	CREATE SEQUENCE park_fee_id_seq START 1;
 	CREATE TABLE park_fee (
-		id UINTEGER DEFAULT nextval('park_fee_id_seq') PRIMARY KEY,
-		park_id UINTEGER,
-		name VARCHAR(255),
-		cost_cents UINTEGER,
+		id UINTEGER DEFAULT nextval('park_fee_id_seq') PRIMARY KEY NOT NULL,
+		park_id UINTEGER NOT NULL,
+		name VARCHAR(255) NOT NULL,
+		cost_cents UINTEGER NOT NULL,
 		FOREIGN KEY (park_id) REFERENCES park(id)
 	);`
 }
 
 func (p Parks) SqliteCreate() string {
 	return `CREATE TABLE park (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT,
-		city TEXT,
-		description TEXT,
-		state_code_id INTEGER,
-		url TEXT,
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL,
+		city TEXT NOT NULL,
+		state_code_id INTEGER NOT NULL,
+		url TEXT NOT NULL,
 		FOREIGN KEY (state_code_id) REFERENCES state_code(id)
 	);
 	CREATE TABLE park_fee (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		park_id INTEGER,
-		name TEXT,
-		cost_cents INTEGER,
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		park_id INTEGER NOT NULL,
+		name TEXT NOT NULL,
+		cost_cents INTEGER NOT NULL,
 		FOREIGN KEY (park_id) REFERENCES park(id)
 	);`
 }
@@ -1040,11 +1039,10 @@ func (p Parks) SqlInsert(idStart int) []string {
 			state = 0
 		}
 		queries = append(queries, fmt.Sprintf(
-			"INSERT INTO park (id, name, city, description, state_code_id, url) VALUES (%d, '%s', '%s', '%s', %d, '%s');",
+			"INSERT INTO park (id, name, city, state_code_id, url) VALUES (%d, '%s', '%s', %d, '%s');",
 			parkCode,
 			strings.ReplaceAll(park.Name, "'", "''"),
 			strings.ReplaceAll(city, "'", "''"),
-			strings.ReplaceAll(park.Description, "'", "''"),
 			state,
 			park.URL,
 		))
@@ -1087,13 +1085,12 @@ func (t Tours) SizeTotal() int {
 func (t Tours) SqlduckCreate() string {
 	return `CREATE SEQUENCE tour_id_seq START 1;
 		CREATE TABLE tour (
-		id UINTEGER DEFAULT nextval('tour_id_seq') PRIMARY KEY,
-		name VARCHAR(255),
-		description TEXT,
-		duration_max UINTEGER,
-		duration_min UINTEGER,
-		duration_id UINTEGER,
-		park_id UINTEGER,
+		id UINTEGER DEFAULT nextval('tour_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(255) NOT NULL,
+		duration_max UINTEGER NOT NULL,
+		duration_min UINTEGER NOT NULL,
+		duration_id UINTEGER NOT NULL,
+		park_id UINTEGER NOT NULL,
 		FOREIGN KEY (park_id) REFERENCES park(id),
 		FOREIGN KEY (duration_id) REFERENCES duration(id)
 	);`
@@ -1101,13 +1098,12 @@ func (t Tours) SqlduckCreate() string {
 
 func (t Tours) SqliteCreate() string {
 	return `CREATE TABLE tour (
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		name TEXT,
-		description TEXT,
-		duration_max INTEGER,
-		duration_min INTEGER,
-		duration_id INTEGER,
-		park_id INTEGER,
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL,
+		duration_max INTEGER NOT NULL,
+		duration_min INTEGER NOT NULL,
+		duration_id INTEGER NOT NULL,
+		park_id INTEGER NOT NULL,
 		FOREIGN KEY (park_id) REFERENCES park(id),
 		FOREIGN KEY (duration_id) REFERENCES duration(id)
 	);`
@@ -1129,9 +1125,8 @@ func (t Tours) SqlInsert(idStart int) []string {
 			log.Fatal(err)
 		}
 		queries = append(queries, fmt.Sprintf(
-			"INSERT INTO tour (name, description, duration_max, duration_min, duration_id, park_id) VALUES ('%s', '%s', %d, %d, %d, %d);",
+			"INSERT INTO tour (name, duration_max, duration_min, duration_id, park_id) VALUES ('%s', %d, %d, %d, %d);",
 			strings.ReplaceAll(tour.Title, "'", "''"),
-			strings.ReplaceAll(tour.Description, "'", "''"),
 			durationMax,
 			durationMin,
 			durations[tour.DurationUnit],
@@ -1202,13 +1197,45 @@ func getOne[R Resource](c *NpsClient, resource string, start int) R {
 	return r
 }
 
-func writeAll[R Resource](client *NpsClient, resource string) {
-	jsonFile, err := os.OpenFile(fmt.Sprintf("data/%s.json", resource), os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+func writeJson[R Resource](client *NpsClient, resource string) string {
+	filename := fmt.Sprintf("data/%s.jsonl", resource)
+	if _, err := os.Stat(filename); err == nil {
+		log.Printf("File %s already exists", filename)
+		return filename
+	}
+	file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
+	defer file.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+	encoder := json.NewEncoder(file)
+	current := 0
+	one := getOne[R](client, resource, current)
+	err = encoder.Encode(one)
+	if err != nil {
+		log.Fatal(err)
+	}
+	total := one.SizeTotal()
+	current = one.SizeCurrent()
+	fmt.Printf("%s: %d/%d\n", resource, current, total)
+	for current < total {
+		one := getOne[R](client, resource, current)
+		err = encoder.Encode(one)
+		if err != nil {
+			log.Fatal(err)
+		}
+		current += one.SizeCurrent()
+		fmt.Printf("%s: %d/%d\n", resource, current, total)
+	}
+	return filename
+}
+
+func writeSql[R Resource](resource string) {
+	jsonFile, err := os.Open(fmt.Sprintf("data/%s.jsonl", resource))
 	defer jsonFile.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
-	encoder := json.NewEncoder(jsonFile)
 	sqlduckCreateFile, err := os.OpenFile("data/duckdb/create.sql", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	defer sqlduckCreateFile.Close()
 	if err != nil {
@@ -1225,46 +1252,42 @@ func writeAll[R Resource](client *NpsClient, resource string) {
 		log.Fatal(err)
 	}
 	current := 0
-	one := getOne[R](client, resource, current)
-	err = encoder.Encode(one)
-	if err != nil {
-		log.Fatal(err)
-	}
-	_, err = sqlduckCreateFile.WriteString(one.SqlduckCreate() + "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
-	_, err = sqliteCreateFile.WriteString(one.SqliteCreate() + "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
-	for _, query := range one.SqlInsert(current) {
-		_, err = sqlInsertFile.WriteString(query + "\n")
+	scanner := bufio.NewScanner(jsonFile)
+	const maxCapacity = 512 * 1024 // 512KB
+	buf := make([]byte, maxCapacity)
+	scanner.Buffer(buf, maxCapacity)
+	for scanner.Scan() {
+		line := scanner.Text()
+		var r R
+		err = json.Unmarshal([]byte(line), &r)
 		if err != nil {
 			log.Fatal(err)
 		}
-	}
-	total := one.SizeTotal()
-	current = one.SizeCurrent()
-	fmt.Printf("%s: %d/%d\n", resource, current, total)
-	for current < total {
-		one := getOne[R](client, resource, current)
-		err = encoder.Encode(one)
-		if err != nil {
-			log.Fatal(err)
+		if current == 0 {
+			_, err = sqlduckCreateFile.WriteString(r.SqlduckCreate() + "\n")
+			if err != nil {
+				log.Fatal(err)
+			}
+			_, err = sqliteCreateFile.WriteString(r.SqliteCreate() + "\n")
+			if err != nil {
+				log.Fatal(err)
+			}
 		}
-		for _, query := range one.SqlInsert(current) {
+		for _, query := range r.SqlInsert(current) {
 			_, err = sqlInsertFile.WriteString(query + "\n")
 			if err != nil {
 				log.Fatal(err)
 			}
 		}
-		current += one.SizeCurrent()
-		fmt.Printf("%s: %d/%d\n", resource, current, total)
+		current += r.SizeCurrent()
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
 	}
 }
 
-func writeSql() {
+func writeSqlCreate() {
 	sqlduckFile, err := os.OpenFile("data/duckdb/create.sql", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
 	defer sqlduckFile.Close()
 	if err != nil {
@@ -1334,8 +1357,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	writeSql()
-	writeAll[Parks](npsClient, "parks")
-	writeAll[Campgrounds](npsClient, "campgrounds")
-	writeAll[Tours](npsClient, "tours")
+	writeJson[Parks](npsClient, "parks")
+	writeJson[Campgrounds](npsClient, "campgrounds")
+	writeJson[Tours](npsClient, "tours")
+	writeSqlCreate()
+	writeSql[Parks]("parks")
+	writeSql[Campgrounds]("campgrounds")
+	writeSql[Tours]("tours")
 }
