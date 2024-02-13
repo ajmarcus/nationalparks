@@ -8,6 +8,11 @@ CREATE TABLE amenity_season (
 		name TEXT NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
+	CREATE TABLE fee (
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL
+	);
+	INSERT INTO fee (id, name) VALUES (0, 'None');
 	CREATE TABLE state_code (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 		name TEXT NOT NULL
@@ -23,9 +28,10 @@ CREATE TABLE amenity_season (
 	CREATE TABLE park_fee (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 		park_id INTEGER NOT NULL,
-		name TEXT NOT NULL,
+		fee_id INTEGER NOT NULL,
 		cost_cents INTEGER NOT NULL,
-		FOREIGN KEY (park_id) REFERENCES park(id)
+		FOREIGN KEY (park_id) REFERENCES park(id),
+		FOREIGN KEY (fee_id) REFERENCES fee(id)
 	);
 CREATE TABLE campground (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -44,13 +50,6 @@ CREATE TABLE campground (
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (park_id) REFERENCES park(id)
-	);
-	CREATE TABLE campground_fee (
-		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-		campground_id INTEGER NOT NULL,
-		name TEXT NOT NULL,
-		cost_cents INTEGER NOT NULL,
-		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);
 CREATE TABLE tour (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,

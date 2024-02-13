@@ -10,6 +10,12 @@ CREATE SEQUENCE amenity_season_id_seq START 1;
 		name CHAR(1) NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
+	CREATE SEQUENCE fee_id_seq START 1;
+	CREATE TABLE fee (
+		id UINTEGER DEFAULT nextval('fee_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(63) NOT NULL
+	);
+	INSERT INTO fee (id, name) VALUES (0, 'None');
 	CREATE SEQUENCE state_code_id_seq START 1;
 	CREATE TABLE state_code (
 		id UINTEGER DEFAULT nextval('state_code_id_seq') PRIMARY KEY NOT NULL,
@@ -28,9 +34,10 @@ CREATE SEQUENCE amenity_season_id_seq START 1;
 	CREATE TABLE park_fee (
 		id UINTEGER DEFAULT nextval('park_fee_id_seq') PRIMARY KEY NOT NULL,
 		park_id UINTEGER NOT NULL,
-		name VARCHAR(255) NOT NULL,
+		fee_id UINTEGER NOT NULL,
 		cost_cents UINTEGER NOT NULL,
-		FOREIGN KEY (park_id) REFERENCES park(id)
+		FOREIGN KEY (park_id) REFERENCES park(id),
+		FOREIGN KEY (fee_id) REFERENCES fee(id)
 	);
 CREATE SEQUENCE campground_id_seq START 1;
 		CREATE TABLE campground (
@@ -50,14 +57,6 @@ CREATE SEQUENCE campground_id_seq START 1;
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (park_id) REFERENCES park(id)
-	);
-	CREATE SEQUENCE campground_fee_id_seq START 1;
-	CREATE TABLE campground_fee (
-		id UINTEGER DEFAULT nextval('campground_fee_id_seq') PRIMARY KEY NOT NULL,
-		campground_id UINTEGER NOT NULL,
-		name VARCHAR(255) NOT NULL,
-		cost_cents UINTEGER NOT NULL,
-		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);
 CREATE SEQUENCE tour_id_seq START 1;
 		CREATE TABLE tour (

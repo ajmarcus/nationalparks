@@ -26,6 +26,12 @@ const SqlduckCreate = `CREATE SEQUENCE amenity_season_id_seq START 1;
 		name CHAR(1) NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
+	CREATE SEQUENCE fee_id_seq START 1;
+	CREATE TABLE fee (
+		id UINTEGER DEFAULT nextval('fee_id_seq') PRIMARY KEY NOT NULL,
+		name VARCHAR(63) NOT NULL
+	);
+	INSERT INTO fee (id, name) VALUES (0, 'None');
 	CREATE SEQUENCE state_code_id_seq START 1;
 	CREATE TABLE state_code (
 		id UINTEGER DEFAULT nextval('state_code_id_seq') PRIMARY KEY NOT NULL,
@@ -42,6 +48,11 @@ const SqliteCreate = `CREATE TABLE amenity_season (
 		name TEXT NOT NULL
 	);
 	INSERT INTO duration (id, name) VALUES (0, 'N');
+	CREATE TABLE fee (
+		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+		name TEXT NOT NULL
+	);
+	INSERT INTO fee (id, name) VALUES (0, 'None');
 	CREATE TABLE state_code (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 		name TEXT NOT NULL
@@ -534,7 +545,25 @@ var parkCodes = map[string]uint16{
 	"zion": 471,
 }
 
-var states = map[string]uint16{
+var fees = map[string]uint16{
+	"Commercial Entrance - Mini-bus":            1,
+	"Commercial Entrance - Motor Coach":         2,
+	"Commercial Entrance - Per Person":          3,
+	"Commercial Entrance - Sedan":               4,
+	"Commercial Entrance - Van":                 5,
+	"Entrance - Education/Academic Groups":      6,
+	"Entrance - Motorcycle":                     7,
+	"Entrance - Non-commercial Groups":          8,
+	"Entrance - Per Person":                     9,
+	"Entrance - Private Vehicle":                10,
+	"Entrance - Snowmobile":                     11,
+	"Park Entrance Fee":                         12,
+	"Timed Entry Reservation - Location":        13,
+	"Timed Entry Reservation - Park":            14,
+	"Timed Entry Reservation - Park & Location": 15,
+}
+
+var stateCodes = map[string]uint16{
 	"AL": 1,
 	"AK": 2,
 	"AZ": 3,
@@ -836,14 +865,6 @@ func (c Campgrounds) SqlduckCreate() string {
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (park_id) REFERENCES park(id)
-	);
-	CREATE SEQUENCE campground_fee_id_seq START 1;
-	CREATE TABLE campground_fee (
-		id UINTEGER DEFAULT nextval('campground_fee_id_seq') PRIMARY KEY NOT NULL,
-		campground_id UINTEGER NOT NULL,
-		name VARCHAR(255) NOT NULL,
-		cost_cents UINTEGER NOT NULL,
-		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);`
 }
 
@@ -865,13 +886,6 @@ func (c Campgrounds) SqliteCreate() string {
 		FOREIGN KEY (has_cell_phone_reception_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (has_laundry_id) REFERENCES amenity_season(id),
 		FOREIGN KEY (park_id) REFERENCES park(id)
-	);
-	CREATE TABLE campground_fee (
-		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-		campground_id INTEGER NOT NULL,
-		name TEXT NOT NULL,
-		cost_cents INTEGER NOT NULL,
-		FOREIGN KEY (campground_id) REFERENCES campground(id)
 	);`
 }
 
@@ -940,19 +954,6 @@ func (c Campgrounds) SqlInsert(idStart int) []string {
 			parkId,
 			campground.ReservationUrl,
 		))
-		for _, fee := range campground.Fees {
-			costDollars, err := strconv.ParseFloat(fee.Cost, 32)
-			if err != nil {
-				log.Fatal(err)
-			}
-			costCents := int(costDollars * 100)
-			queries = append(queries, fmt.Sprintf(
-				"INSERT INTO campground_fee (campground_id, name, cost_cents) VALUES (%d, '%s', %d);",
-				campgroundId,
-				strings.ReplaceAll(fee.Title, "'", "''"),
-				costCents,
-			))
-		}
 		campgroundId++
 	}
 	return queries
@@ -991,9 +992,10 @@ func (p Parks) SqlduckCreate() string {
 	CREATE TABLE park_fee (
 		id UINTEGER DEFAULT nextval('park_fee_id_seq') PRIMARY KEY NOT NULL,
 		park_id UINTEGER NOT NULL,
-		name VARCHAR(255) NOT NULL,
+		fee_id UINTEGER NOT NULL,
 		cost_cents UINTEGER NOT NULL,
-		FOREIGN KEY (park_id) REFERENCES park(id)
+		FOREIGN KEY (park_id) REFERENCES park(id),
+		FOREIGN KEY (fee_id) REFERENCES fee(id)
 	);`
 }
 
@@ -1009,9 +1011,10 @@ func (p Parks) SqliteCreate() string {
 	CREATE TABLE park_fee (
 		id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 		park_id INTEGER NOT NULL,
-		name TEXT NOT NULL,
+		fee_id INTEGER NOT NULL,
 		cost_cents INTEGER NOT NULL,
-		FOREIGN KEY (park_id) REFERENCES park(id)
+		FOREIGN KEY (park_id) REFERENCES park(id),
+		FOREIGN KEY (fee_id) REFERENCES fee(id)
 	);`
 }
 
@@ -1034,7 +1037,7 @@ func (p Parks) SqlInsert(idStart int) []string {
 		if !ok {
 			parkCode = 0
 		}
-		state, ok := states[stateCode]
+		state, ok := stateCodes[stateCode]
 		if !ok {
 			state = 0
 		}
@@ -1052,10 +1055,14 @@ func (p Parks) SqlInsert(idStart int) []string {
 				log.Fatal(err)
 			}
 			costCents := int(costDollars * 100)
+			fee, ok := fees[fee.Title]
+			if !ok {
+				fee = 0
+			}
 			queries = append(queries, fmt.Sprintf(
-				"INSERT INTO park_fee (park_id, name, cost_cents) VALUES (%d, '%s', %d);",
+				"INSERT INTO park_fee (park_id, fee_id, cost_cents) VALUES (%d, %d, %d);",
 				parkCode,
-				strings.ReplaceAll(fee.Title, "'", "''"),
+				fee,
 				costCents,
 			))
 		}
@@ -1146,9 +1153,9 @@ type Resource interface {
 }
 
 type NpsClient struct {
-	Client    *http.Client
-	Key       string
-	base      string
+	Client *http.Client
+	Key    string
+	base   string
 }
 
 func makeNpsClient(key string) *NpsClient {
@@ -1330,7 +1337,17 @@ func writeSqlCreate() {
 			log.Fatal(err)
 		}
 	}
-	for key, value := range states {
+	for key, value := range fees {
+		_, err = sqlInsertFile.WriteString(fmt.Sprintf(
+			"INSERT INTO fee (id, name) VALUES (%d,'%s');\n",
+			value,
+			key,
+		))
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	for key, value := range stateCodes {
 		_, err = sqlInsertFile.WriteString(fmt.Sprintf(
 			"INSERT INTO state_code (id, name) VALUES (%d,'%s');\n",
 			value,

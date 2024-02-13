@@ -49,8 +49,8 @@ sqlite3 nps.sqlite
 ```sql
 select count(1) from amenity_season;
 select count(1) from campground;
-select count(1) from campground_fee;
 select count(1) from duration;
+select count(1) from fee;
 select count(1) from park;
 select count(1) from park_fee;
 select count(1) from state_code;
@@ -64,10 +64,10 @@ sqlite> select count(1) from amenity_season;
 4
 sqlite> select count(1) from campground;
 638
-sqlite> select count(1) from campground_fee;
-1148
 sqlite> select count(1) from duration;
 4
+sqlite> select count(1) from fee;
+16
 sqlite> select count(1) from park;
 471
 sqlite> select count(1) from park_fee;
@@ -99,8 +99,8 @@ duckdb nps.duckdb
 ```sql
 select count(1) from amenity_season;
 select count(1) from campground;
-select count(1) from campground_fee;
 select count(1) from duration;
+select count(1) from fee;
 select count(1) from park;
 select count(1) from park_fee;
 select count(1) from state_code;
@@ -122,14 +122,7 @@ D select count(1) from campground;
 │ count(1) │
 │  int64   │
 ├──────────┤
-│      638 │
-└──────────┘
-D select count(1) from campground_fee;
-┌──────────┐
-│ count(1) │
-│  int64   │
-├──────────┤
-│     1148 │
+│      637 │
 └──────────┘
 D select count(1) from duration;
 ┌──────────┐
@@ -137,6 +130,13 @@ D select count(1) from duration;
 │  int64   │
 ├──────────┤
 │        4 │
+└──────────┘
+D select count(1) from fee;
+┌──────────┐
+│ count(1) │
+│  int64   │
+├──────────┤
+│       16 │
 └──────────┘
 D select count(1) from park;
 ┌──────────┐
@@ -150,7 +150,7 @@ D select count(1) from park_fee;
 │ count(1) │
 │  int64   │
 ├──────────┤
-│      523 │
+│      524 │
 └──────────┘
 D select count(1) from state_code;
 ┌──────────┐
